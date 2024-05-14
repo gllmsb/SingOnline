@@ -1,11 +1,11 @@
 import { supabase } from '../config/supabase.config.js'
 
-export default class Album {
+export default class AlbumModel {
     static async getAllRecords() {
         try {
             const { data, error } = await supabase 
             .from('albums')
-            .select('id, title, artist_id, release_date')
+            .select('id, title, release_date')
         if(error) {
             throw new Error(error)
         } else {
@@ -16,7 +16,7 @@ export default class Album {
         }
     }
 
-    static async getRecordbyId() {
+    static async getRecordById() {
 
     }
 }

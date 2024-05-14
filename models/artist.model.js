@@ -1,6 +1,6 @@
 import { supabase } from '../config/supabase.config.js'
 
-export default class Artist {
+export default class ArtistModel {
     static async getAllRecords() {
         try {
             const { data, error } = await supabase
@@ -16,7 +16,7 @@ export default class Artist {
         }
     }
 
-    static async getRecordbyId() {
+    static async getRecordById() {
 
     }
 }
