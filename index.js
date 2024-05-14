@@ -1,10 +1,33 @@
-import http from 'http';
+import  express from 'express' 
+import dotenv from 'dotenv'
+import { supabase } from './config/supabase.config.js'
+const app = express()
+dotenv.config()
 
-const port = 3000
+const port = process.env.PORT
 
-http.createServer((request, response) => {
-    console.log(`Server is running on https://localhost:${port}`);
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    response.write('Hello World');
-    response.end();
-}).listen(port) 
+app.get('/', (req, res) => {    
+    console.log(req.query);
+    res.send('Forside')
+})
+
+app.get('/contact', (req, res) => {
+    res.send('Kontakt side')
+})
+
+app.get('/test', (req, res) => {
+    const { data, error } = supabase
+        .from('songs')
+        .select('*')
+    if(error) {
+        console.error(error)
+    }else {
+        console.log(data);
+    }
+})
+
+app.listen(port, () => {
+    console.log('Webserver is running now on http://localhost:3000');
+})
+
+
