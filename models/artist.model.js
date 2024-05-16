@@ -16,7 +16,20 @@ export default class ArtistModel {
         }
     }
 
-    static async getRecordById() {
-
+    static async getRecordById(id) {
+        try {
+            const { data, error } = await supabase
+            .from('artists')
+            .select('id, name')
+            .eq('id', id)
+        if(error) {
+            throw new Error(error)
+        } else {
+            return data
+        }
+        }catch (error) {
+            console.error(`Error fetching artists: ${error}`)
+        }
     }
+
 }

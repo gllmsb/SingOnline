@@ -6,3 +6,8 @@ SongController.get('/songs', async (req, res) => {
     const data = await SongModel.getAllRecords()
     res.send(data)
 })
+SongController.get('/songs/:id', async (req, res) => {
+    const data = await SongModel.getRecordById(req.params.id)
+    console.log(data);
+    res.send(data);
+})

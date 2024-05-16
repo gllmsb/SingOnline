@@ -16,7 +16,20 @@ export default class AlbumModel {
         }
     }
 
-    static async getRecordById() {
-
+    static async getRecordById(id) {
+        try {
+            const { data, error } = await supabase 
+            .from('albums')
+            .select('id, title, artist_id, release_date')
+            .eq('id', id)
+        if(error) {
+            throw new Error(error)
+        } else {
+            return data
+        }
+        }catch (error) {
+            console.error(`Error fetch albums: ${error}`)
+        }
     }
+
 }
