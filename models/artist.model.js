@@ -52,4 +52,26 @@ export default class ArtistModel {
         }
     }
 
+    static async updateRecord(formdata) {
+        try {
+            let { data, error } = await supabase
+            .from('artists')
+            .update([
+                {
+                    id: formdata.id,
+                    name: formdata.name
+                }
+            ])
+            .eq('id', formdata.id)
+        
+            if(error) {
+                throw new Error(error)
+            } else {
+                return data
+            }
+        } catch (error) {
+            console.log(`Error updating record ${error}`);
+        }
+    }
+
 }

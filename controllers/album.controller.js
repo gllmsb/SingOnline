@@ -14,4 +14,8 @@ AlbumController.get('/albums/:id', async (req, res) => {
 AlbumController.post('/albums', async (req, res) => {
     const data = await AlbumModel.createRecord(req.body)
     res.send(data)
+})
+AlbumController.put('/albums', async (req, res) => {
+    const data = await AlbumModel.updateRecord(req.body)
+    res.send(data)
 });

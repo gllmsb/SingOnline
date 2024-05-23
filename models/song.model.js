@@ -55,4 +55,29 @@ export default class SongModel {
         }
     }
 
+    static async updateRecord(formdata) {
+        try {
+            let { data, error } = await supabase
+                .from('songs')
+                .update([
+                    {
+                        title: formdata.title,
+                        content: formdata.content,
+                        lyrics: formdata.lyrics,
+                        artist_id: formdata.artist_id
+                    }
+                ])
+                .eq('id', formdata.id)
+    
+            if(error) {
+                throw new Error(error)
+            } else {
+                return data
+            }
+    
+        } catch (error) {
+            console.error(`Error updating record ${error}`);
+        }
+    }
+
 }

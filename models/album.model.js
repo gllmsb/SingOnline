@@ -38,7 +38,6 @@ export default class AlbumModel {
             .from('albums')
             .insert([
                 {
-                    id: formdata.id,
                     title: formdata.title,
                     artist_id: formdata.artist_id,
                     release_date: formdata.release_date
@@ -51,6 +50,29 @@ export default class AlbumModel {
             }
         } catch (error) {
             console.log(`Error ${error}`);
+        }
+    }
+
+    static async updateRecord(formdata) {
+        try {
+            let { data, error } = await supabase
+                .from('albums')
+                .update([
+                    {
+                        title: formdata.title,
+                        artist_id: formdata.artist_id,
+                        release_date: formdata.release_date
+                    }
+                ])
+                .eq('id', formdata.id)
+
+            if(error) {
+                throw new Error(error)
+            } else {
+                return data
+            }
+        } catch (error) {
+            console.log(`Error updating record ${error}`);
         }
     }
 
