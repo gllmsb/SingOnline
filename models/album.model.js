@@ -32,4 +32,26 @@ export default class AlbumModel {
         }
     }
 
+    static async createRecord(formdata) {
+        try {
+            const { data, error } = await supabase
+            .from('albums')
+            .insert([
+                {
+                    id: formdata.id,
+                    title: formdata.title,
+                    artist_id: formdata.artist_id,
+                    release_date: formdata.release_date
+                }
+            ])
+            if(error) {
+                throw new Error(error)
+            } else {
+                return data
+            }
+        } catch (error) {
+            console.log(`Error ${error}`);
+        }
+    }
+
 }

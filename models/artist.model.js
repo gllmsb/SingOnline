@@ -32,4 +32,24 @@ export default class ArtistModel {
         }
     }
 
+    static async createRecord(formdata) {
+        try {
+            const { data, error } = await supabase
+            .from('/artists')
+            .insert([
+                {
+                    id: formdata.id,
+                    name: formdata.name
+                }
+            ])
+            if(error) {
+                throw new Error(error)
+            } else {
+                return data
+            }
+        } catch (error) {
+            console.log(`Error ${error}`);
+        }
+    }
+
 }

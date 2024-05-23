@@ -5,6 +5,7 @@ import { ArtistController } from './controllers/artist.controller.js'
 import { AlbumController} from './controllers/album.controller.js'
 const app = express()
 const port = process.env.PORT
+app.use(express.urlencoded({ extended: true }));
 dotenv.config()
 
 app.use(SongController)

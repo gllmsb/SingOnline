@@ -32,4 +32,27 @@ export default class SongModel {
         }
     } 
 
+    static async createRecord(formdata) {
+        try {
+            const { data, error } = await supabase
+            .from('songs')
+            .insert([
+                {
+                title: formdata.title,
+                content: formdata.content,
+                lyrics: formdata.lyrics,
+                artist_id: formdata.artist_id
+                }
+        ])
+            if(error) {
+                throw new Error(error)
+            } else {
+                return data
+            }
+    
+        } catch (error) {
+            console.error(`Error ${error}`)
+        }
+    }
+
 }
