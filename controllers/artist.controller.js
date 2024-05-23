@@ -18,4 +18,8 @@ ArtistController.post('/artists', async (req, res) => {
 ArtistController.put('/artists', async (req, res) => {
     const data = await ArtistModel.updateRecord(req.body)
     res.send(data)
-});
+})
+ArtistController.delete('/artists', async (req, res) => {
+    const data = await ArtistModel.deleteRecord(req.body)
+    res.send(data)
+})

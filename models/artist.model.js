@@ -7,7 +7,7 @@ export default class ArtistModel {
             .from('artists')
             .select('id, name');
         if(error) {
-            throw new Error(error)
+            throw new Error(error.message)
         } else {
             return data
         }
@@ -23,7 +23,7 @@ export default class ArtistModel {
             .select('id, name')
             .eq('id', id)
         if(error) {
-            throw new Error(error)
+            throw new Error(error.message)
         } else {
             return data
         }
@@ -43,7 +43,7 @@ export default class ArtistModel {
                 }
             ])
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
@@ -65,12 +65,29 @@ export default class ArtistModel {
             .eq('id', formdata.id)
         
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
         } catch (error) {
             console.log(`Error updating record ${error}`);
+        }
+    }
+
+    static async deleteRecord(formdata) {
+        try {
+            let { data, error } = await supabase
+            .from('artists')
+            .delete()
+            .eq('id', formdata.id)
+
+        if(error) {
+            throw new Error(error.message)
+        } else {
+            return data
+        }
+        } catch (error) {
+            console.log(`Error deleting record ${error}`);
         }
     }
 

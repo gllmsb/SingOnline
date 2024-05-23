@@ -7,7 +7,7 @@ export default class SongModel {
                 .from('songs')
                 .select('id, title, content, created_at, artists(name)');
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
@@ -23,7 +23,7 @@ export default class SongModel {
                 .select('*, artists(id, name)')
                 .eq('id', id)
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
@@ -45,7 +45,7 @@ export default class SongModel {
                 }
         ])
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
@@ -70,13 +70,30 @@ export default class SongModel {
                 .eq('id', formdata.id)
     
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
     
         } catch (error) {
             console.error(`Error updating record ${error}`);
+        }
+    }
+
+    static async deleteRecord(formdata) {
+        try {
+            let { data, error } = await supabase
+            .from('songs')
+            .delete()
+            .eq('id', formdata.id)
+
+        if(error) {
+            throw new Error(error.message)
+        } else {
+            return data
+        }
+        } catch (error) {
+            console.log(`Error deleting record ${error}`);
         }
     }
 

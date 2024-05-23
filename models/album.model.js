@@ -7,7 +7,7 @@ export default class AlbumModel {
             .from('albums')
             .select('id, title, artist_id, release_date')
         if(error) {
-            throw new Error(error)
+            throw new Error(error.message)
         } else {
             return data
         }
@@ -23,7 +23,7 @@ export default class AlbumModel {
             .select('id, title, artist_id, release_date')
             .eq('id', id)
         if(error) {
-            throw new Error(error)
+            throw new Error(error.message)
         } else {
             return data
         }
@@ -44,7 +44,7 @@ export default class AlbumModel {
                 }
             ])
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
@@ -67,12 +67,29 @@ export default class AlbumModel {
                 .eq('id', formdata.id)
 
             if(error) {
-                throw new Error(error)
+                throw new Error(error.message)
             } else {
                 return data
             }
         } catch (error) {
             console.log(`Error updating record ${error}`);
+        }
+    }
+
+    static async deleteRecord(formdata) {
+        try {
+            let { data, error } = await supabase
+            .from('albums')
+            .delete()
+            .eq('id', formdata.id)
+
+        if(error) {
+            throw new Error(error.message)
+        } else {
+            return data
+        }
+        } catch (error) {
+            console.log(`Error deleting record ${error}`);
         }
     }
 
