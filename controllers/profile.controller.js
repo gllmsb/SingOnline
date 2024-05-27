@@ -13,7 +13,7 @@ ProfileController.get('/profiles/:id', async (req, res) => {
 })
 ProfileController.post('/profiles', async (req, res) => {
     const data = await ProfileModel.createRecord(req.body)
-    res.send(dataq)
+    res.send(data)
 })
 ProfileController.put('/profiles', async (req, res) => {
     const data = await ProfileModel.updateRecord(req.body)

@@ -37,7 +37,21 @@ export default class ProfileModel {
         try {
             const { data, error } = await supabase
             .from('profiles')
-            .insert(formdata);
+            .insert([
+                {
+                    firstname: formdata.firstname,
+                    lastname: formdata.lastname,
+                    address: formdata.address,
+                    postal_number: formdata.postal_number,
+                    city: formdata.city,
+                    country: formdata.country,
+                    email: formdata.email,
+                    phone_number: formdata.phone_number,
+                    gender: formdata.gender,
+                    date_of_birth: new Date(formdata.date_of_birth),
+                    user_id: formdata.user_id 
+                }
+            ]);
 
         if(error) {
             throw new Error(error.message)
@@ -56,7 +70,6 @@ export default class ProfileModel {
             .update([
                 {
                     firstname: formdata.firstname,
-                    middlename: formdata.middlename,
                     lastname: formdata.lastname,
                     address: formdata.address,
                     postal_number: formdata.postal_number,
@@ -65,7 +78,7 @@ export default class ProfileModel {
                     email: formdata.email,
                     phone_number: formdata.phone_number,
                     gender: formdata.gender,
-                    date_of_birth: formdata.date_of_birth,
+                    date_of_birth: new Date(formdata.date_of_birth),
                     user_id: formdata.user_id
                 }
             ])
