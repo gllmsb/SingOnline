@@ -1,0 +1,19 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin';
+// opens second form
+.c-checkbox:nth-of-type(2):checked ~  {
+    .c-form__progress {
+      width: calc(100vw / 3);
+    }
+  
+    .c-formContainer .c-form {
+      .c-form__group:nth-child(1) {
+        @include form-group-hidden;
+      }
+  
+      .c-form__group:nth-child(2) {
+        @include form-group-visible;
+        @include input-listener;
+      }
+    }
+  }

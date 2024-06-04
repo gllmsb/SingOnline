@@ -1,0 +1,35 @@
+@mixin form-group-visible {
+    visibility: visible;
+    opacity: 1;
+  
+    .c-form__border {
+      width: 100%;
+    }
+  }
+  
+  @mixin form-group-hidden {
+    visibility: hidden;
+    opacity: 0;
+  
+    .c-form__border {
+      width: 0;
+    }
+  }
+  
+  @mixin input-listener {
+    // hints user for invalid input
+    .c-form__input:not(:placeholder-shown):invalid ~  {
+      .c-form__border,
+      .c-form__next {
+        color: $torch-red;
+      }
+    }
+  
+    // allows submit
+    .c-form__input:required:valid ~  {
+      .c-form__next {
+        pointer-events: initial;
+        color: $scorpion;
+      }
+    }
+  }
