@@ -4,8 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SingOnline</title>
+    <link rel="stylesheet" href="assets/scss/pages/home.css">
 </head>
 <body>
-    <h1>hello world</h1>
+
+    <img src="/assets/images/bg2.png" id="bg" alt="">
+    
+    <nav class="navbar">
+        <div class="navbar__logo">SingOnline</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="home.html" class="navBarLink">Home</a></li>
+            <li class="navbar__item"><a href="artists.html" class="navBarLink">Artists</a></li>
+            <li class="navbar__item"><a href="albums.html" class="navBarLink">Albums</a></li>
+            <li class="navbar__item"><a href="songs.html" class="navBarLink">Songs</a></li>
+            <li class="navbar__item"><a href="profile.html" class="navBarLink">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section class="ad">
+        <video autoplay loop muted id="bannerVideo">
+            <source src="/assets/video/banner.mp4" type="video/mp4">
+        </video>
+    </section>
+        
+
+    <section class="featuredArtists">
+        <h2>Featured Artists</h2>
+        <div class="container">
+          <div class="featured-artists">
+            <div class="artists-wrapper">
+              <div class="artist-card"><img src="/assets/images/theidol.png" alt="Artist 1"></div>
+              <div class="artist-card"><img src="/assets/images/hitmehardandsoft.png" alt="Artist 2"></div>
+              <div class="artist-card"><img src="/assets/images/notlikeus.png" alt="Artist 3"></div>
+              <div class="artist-card"><img src="/assets/images/typost.png" alt="Artist 4"></div>
+              <div class="artist-card"><img src="/assets/images/wecantbefriends.png" alt="Artist 5"></div>
+              <div class="artist-card"><img src="/assets/images/yellow.png" alt="Artist 6"></div>
+              <div class="artist-card"><img src="/assets/images/justice.png" alt="Artist 7"></div>
+              <div class="artist-card"><img src="/assets/images/divide.png" alt="Artist 8"></div>
+              <div class="artist-card"><img src="/assets/images/heartless.png" alt="Artist 9"></div>
+              <div class="artist-card"><img src="/assets/images/saturn.png" alt="Artist 10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="midSection">
+        <div class="topSongs">
+            <div class="songList left">
+                <div class="songCard">
+                    <img src="/assets/images/sabrina.png" alt="Song1">
+                    <div class="songDetail">
+                        <h3>Espresso</h3>
+                        <p>Sabrina Carpenter</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/Chappell.png" alt="Song2">
+                    <div class="songDetail">
+                        <h3>Good Luck, Babe!</h3>
+                        <p>Chappell Roan</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/magnetic.png" alt="Song3">
+                    <div class="songDetail">
+                        <h3>Magnetic</h3>
+                        <p>ILLIT</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/typost.png" alt="Song4">
+                    <div class="songDetail">
+                        <h3>Fortnight</h3>
+                        <p>Taylor Swift ft. Post Malone</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/ilikethewayukissme.png" alt="Song5">
+                    <div class="songDetail">
+                        <h3>I like the way you kiss me</h3>
+                        <p>Artemas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="songList right">
+                <div class="songCard">
+                    <img src="/assets/images/euphoria.png" alt="Song6">
+                    <div class="songDetail">
+                        <h3>Euphoria</h3>
+                        <p>Kendrick Lamar</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/mdb.png" alt="Song7">
+                    <div class="songDetail">
+                        <h3>Million Dollar Baby</h3>
+                        <p>Tommy Richman</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/notlikeus.png" alt="Song8">
+                    <div class="songDetail">
+                        <h3>Not Like Us</h3>
+                        <p>kendrick Lamar</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/pushups.png" alt="Song9">
+                    <div class="songDetail">
+                        <h3>Push Ups</h3>
+                        <p>Drake</p>
+                    </div>
+                </div>
+                <div class="songCard">
+                    <img src="/assets/images/toosweet.png" alt="Song10">
+                    <div class="songDetail">
+                        <h3>Too Sweet</h3>
+                        <p>Hozier</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lowerSection">
+        <div class="card">
+            <div class="first-content">
+              <span>News</span>
+            </div>
+            <div class="second-content">
+          <span>SingOnline Launches AI Song Collaboration Platform</span>
+            </div>
+          </div>
+        <div class="card">
+            <div class="first-content">
+              <span>Events</span>
+            </div>
+            <div class="second-content">
+          <span>Upcoming Events!</span>
+            </div>
+          </div>
+        <div class="card">
+            <div class="first-content">
+              <span>Premium</span>
+            </div>
+            <div class="second-content">
+          <span>Get premium for only 69kr</span>
+            </div>
+          </div>
+    </section>
+
+    <footer class="footer">
+        <ul class="footer__links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Copyright Policy</a></li>
+            <li>&copy; 2024 SingOnline AB</li>
+        </ul>
+        <div class="footer__contact">
+            <span>Contact Support</span>
+            <a href="contact.html" class="footer__button">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const featuredArtists = document.querySelector('.featured-artists');
+    const artistsWrapper = document.querySelector('.artists-wrapper');
+    let scrollAmount = 0;
+
+    function updateScroll() {
+        if (scrollAmount !== 0) {
+            artistsWrapper.scrollLeft += scrollAmount;
+            requestAnimationFrame(updateScroll);
+        }
+    }
+
+    featuredArtists.addEventListener('mousemove', (event) => {
+        const containerWidth = featuredArtists.offsetWidth;
+        const cursorPosition = event.clientX - featuredArtists.getBoundingClientRect().left;
+        const maxScrollSpeed = 1; 
+
+        const distanceFromCenter = cursorPosition - containerWidth / 2;
+        scrollAmount = (distanceFromCenter / (containerWidth / 2)) * maxScrollSpeed;
+        requestAnimationFrame(updateScroll);
+    });
+
+    featuredArtists.addEventListener('mouseleave', () => {
+        scrollAmount = 0;
+    });
+});
+    </script>
 </body>
 </html>

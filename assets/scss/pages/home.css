@@ -1,0 +1,260 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: #0C134F;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__item {
+  margin-left: 2rem;
+}
+
+.navBarLink {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+.navBarLink:hover {
+  color: #1a73e8;
+}
+
+.footer {
+  background: #0C134F;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+.footer__links li a {
+  text-decoration: none;
+  color: #FFF;
+  transition: color 0.3s ease;
+}
+.footer__links li a:hover {
+  color: #1a73e8;
+}
+.footer__contact {
+  display: flex;
+  align-items: center;
+}
+.footer__contact span {
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #FFF;
+}
+.footer__contact .footer__button {
+  display: inline-block;
+  background: #2979FF;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.footer__contact .footer__button:hover {
+  background: #005cf5;
+}
+
+#bannerVideo {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.ad {
+  background-color: rgba(12, 19, 79, 0.4392156863);
+}
+
+.featuredArtists {
+  background-color: rgba(12, 19, 79, 0.4392156863);
+  margin-top: -1.25rem;
+}
+
+h2 {
+  text-align: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 92rem;
+  margin: 0 auto;
+}
+
+.featured-artists {
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.featured-artists .artists-wrapper {
+  display: flex;
+  overflow-x: hidden;
+}
+.featured-artists .artists-wrapper .artist-card {
+  flex: 0 0 auto;
+  width: 12rem;
+  height: 12rem;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.featured-artists .artists-wrapper .artist-card img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.featured-artists .artists-wrapper .artist-card img:hover {
+  transform: scale(1.1);
+}
+
+.midSection {
+  padding: 20px;
+  background-color: rgba(12, 19, 79, 0.4392156863);
+}
+.midSection .topSongs {
+  display: flex;
+  justify-content: space-between;
+}
+.midSection .topSongs .songList {
+  width: 45%;
+}
+.midSection .topSongs .songList .songCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: rgba(12, 19, 79, 0.4392156863);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.midSection .topSongs .songList .songCard img {
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  border-radius: 20rem;
+  margin-right: 20px;
+}
+.midSection .topSongs .songList .songCard .songDetail {
+  flex: 1;
+}
+.midSection .topSongs .songList .songCard .songDetail h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+.midSection .topSongs .songList .songCard .songDetail p {
+  color: #FFFFFF;
+  font-size: 1em;
+}
+.midSection .topSongs .songList .songCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2509803922);
+}
+
+.lowerSection {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(12, 19, 79, 0.4392156863);
+  gap: 2rem;
+}
+
+.card {
+  width: 400px;
+  height: 254px;
+  background: #0C134F;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+.card:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  background: rgba(255, 255, 255, 0.1254901961);
+}
+.card .first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+.card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+.card .second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+.card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #FFF;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}/*# sourceMappingURL=home.css.map */

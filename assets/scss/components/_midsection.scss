@@ -1,0 +1,53 @@
+@use '../helpers/variables' as *;
+
+.midSection {
+    padding: 20px;
+    background-color: $midbglight;
+
+    .topSongs {
+        display: flex;
+        justify-content: space-between;
+
+        .songList {
+            width: 45%;
+
+            .songCard {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                background-color: $midbglight;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 10px;
+                    border-radius: 20rem;
+                    margin-right: 20px;
+                }
+
+                .songDetail {
+                    flex: 1;
+
+                    h3 {
+                        font-size: 1.2em;
+                        margin-bottom: 5px;
+                        color: $midfont;
+                    }
+
+                    p {
+                        color: $midfont;
+                        font-size: 1em;
+                    }
+                }
+            }
+
+            .songCard:hover {
+                transform: scale(1.03); 
+                box-shadow: 0 6px 10px #ffffff40; 
+        }
+    }
+}
+}

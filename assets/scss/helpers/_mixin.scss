@@ -1,3 +1,4 @@
+//*SIGNUP MIXINS
 @mixin form-group-visible {
     visibility: visible;
     opacity: 1;
@@ -17,7 +18,6 @@
   }
   
   @mixin input-listener {
-    // hints user for invalid input
     .c-form__input:not(:placeholder-shown):invalid ~  {
       .c-form__border,
       .c-form__next {
@@ -25,7 +25,6 @@
       }
     }
   
-    // allows submit
     .c-form__input:required:valid ~  {
       .c-form__next {
         pointer-events: initial;

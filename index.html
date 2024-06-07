@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SingOnline</title>
-    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="assets/scss/pages/intro.css">
 </head>
 <body>
     <main>
@@ -33,7 +33,21 @@
         </section>
     </main>
 
-    <script src="assets/js/intro.js"></script>
+    <script>
+        (function() {
+    const hero = document.querySelector(".hero");
+    // const heroImage = document.querySelector(".hero__portal--fg img");
+
+    // heroImage.addEventListener("load", function() {
+    //    hero.classList.add('hero--animated');
+    // });
+	
+    window.addEventListener("load", function() {
+       hero.classList.add('hero--animated');
+    });
+})();
+
+    </script>
 
 </body>
 </html>
