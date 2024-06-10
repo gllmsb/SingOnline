@@ -1,4 +1,5 @@
 # SingOnline
 https://gllmsb.github.io/SingOnline/
 
-//! navbar not fully fixed and artists.html mediaqueries does not work
+//*MOBILE
+//! navbar not fully fixed (cant figure it out :((((( ) and the artists.html mediaqueries does not work somehow. 
