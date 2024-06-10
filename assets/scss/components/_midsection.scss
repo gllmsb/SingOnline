@@ -47,7 +47,22 @@
             .songCard:hover {
                 transform: scale(1.03); 
                 box-shadow: 0 6px 10px #ffffff40; 
+            }
         }
     }
-}
+
+    @media screen and (max-width: 768px) {
+        .topSongs {
+            flex-direction: column; 
+
+            .songList {
+                width: 100%; 
+                margin-bottom: 20px; 
+
+                .songCard {
+                    margin-right: 0; 
+                }
+            }
+        }
+    }
 }

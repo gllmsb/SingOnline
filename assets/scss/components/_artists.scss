@@ -1,0 +1,36 @@
+@use '../helpers/variables' as *;
+.artists {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: $midbglight;
+    
+    .artist {
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: opacity 0.3s, transform 0.3s;
+            opacity: 0.7; 
+
+            &:hover {
+                opacity: 1; 
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .artist-name {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+}

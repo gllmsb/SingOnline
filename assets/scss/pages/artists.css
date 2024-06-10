@@ -1,0 +1,231 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: #0C134F;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 2rem 1rem;
+    position: relative;
+  }
+}
+
+.navbar__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0C134F;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+}
+
+.navbar__item {
+  margin-left: 2rem;
+}
+@media (max-width: 768px) {
+  .navbar__item {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.navBarLink {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+.navBarLink:hover {
+  color: #1a73e8;
+}
+@media (max-width: 768px) {
+  .navBarLink {
+    font-size: 1.5rem;
+  }
+}
+
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #FFF;
+}
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+  }
+}
+
+.navbar__menu--open {
+  display: flex;
+}
+
+.expanded-padding {
+  padding-top: 8rem; /* Adjust this value according to the height of your navbar */
+}
+
+.footer {
+  background: #0C134F;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+.footer__links li a {
+  text-decoration: none;
+  color: #FFF;
+  transition: color 0.3s ease;
+}
+.footer__links li a:hover {
+  color: #1a73e8;
+}
+.footer__contact {
+  display: flex;
+  align-items: center;
+}
+.footer__contact span {
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #FFF;
+}
+.footer__contact .footer__button {
+  display: inline-block;
+  background: #2979FF;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.footer__contact .footer__button:hover {
+  background: #005cf5;
+}
+
+.artists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(12, 19, 79, 0.4392156863);
+}
+.artists .artist {
+  text-align: center;
+}
+.artists .artist img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.7;
+}
+.artists .artist img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.artists .artist .artist-name {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .artists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(12, 19, 79, 0.4392156863);
+}
+.search-bar input[type=text] {
+  width: 60%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  background-color: rgba(12, 19, 79, 0.4392156863);
+  color: #FFFFFF;
+}
+.search-bar input[type=text]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.artists {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.artists .artist {
+  text-align: center;
+}
+.artists .artist img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.7;
+}
+.artists .artist img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.artists .artist .artist-name {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #FFF;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}/*# sourceMappingURL=artists.css.map */

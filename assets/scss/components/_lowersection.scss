@@ -1,10 +1,18 @@
 //https://uiverse.io/suleymanlaarabidev/perfect-husky-88
 @use '../helpers/variables' as *;
 .lowerSection {
-    display: flex;
-    justify-content: center;
-    background-color: $midbglight;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: $midbglight;
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+      display: block; 
+      text-align: center; 
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      padding-left: 1.6rem;
+  }
 }
 .card {
     width: 400px;

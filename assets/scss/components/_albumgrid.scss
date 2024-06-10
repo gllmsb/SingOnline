@@ -1,0 +1,43 @@
+@use '../helpers/variables' as *;
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: $midbglight;
+    margin-right: -4rem;
+
+    .album {
+        position: relative;
+        width: 80%;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .album-title {
+            color: $midfont;
+            font-size: 1rem;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: -2.5rem;
+    }
+}
